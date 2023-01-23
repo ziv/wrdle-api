@@ -1,4 +1,4 @@
-import { crypto, decode, encode } from "./deps.ts";
+import { decode, encode } from "../deps.ts";
 
 // cypher details
 const name = "AES-GCM";

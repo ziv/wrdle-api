@@ -1,8 +1,11 @@
-import cypher from "./cypher.ts";
+import cypher from "./utils/cypher.ts";
+import { json } from "./utils/http.ts";
 
 const words = ["lemon", "orange"];
 
-export default async function choose(_len: string | number): Promise<string> {
+export default async function choose(req: Request, _len: string) {
+  // todo replace this stub
   const w = words[Math.random() > .5 ? 1 : 0];
-  return cypher().then((c) => c.enc(w));
+  const enc = await cypher().then((c) => c.enc(w));
+  return json(enc);
 }

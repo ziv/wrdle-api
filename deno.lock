@@ -15,7 +15,8 @@
     "https://deno.land/std@0.173.0/crypto/to_hash_string.ts": "fe4e95239d7afb617f469bc2f76ff20f888ddb8d1385e0d92276f6e4d5a809d1",
     "https://deno.land/std@0.173.0/encoding/base64.ts": "7de04c2f8aeeb41453b09b186480be90f2ff357613b988e99fabb91d2eeceba1",
     "https://deno.land/std@0.173.0/encoding/base64url.ts": "3f1178f6446834457b16bfde8b559c1cd3481727fe384d3385e4a9995dc2d851",
-    "https://deno.land/std@0.173.0/encoding/hex.ts": "50f8c95b52eae24395d3dfcb5ec1ced37c5fe7610ef6fffdcc8b0fdc38e3b32f"
+    "https://deno.land/std@0.173.0/encoding/hex.ts": "50f8c95b52eae24395d3dfcb5ec1ced37c5fe7610ef6fffdcc8b0fdc38e3b32f",
+    "https://deno.land/std@0.173.0/http/server.ts": "cbb17b594651215ba95c01a395700684e569c165a567e4e04bba327f41197433"
   },
   "npm": {
     "specifiers": {
