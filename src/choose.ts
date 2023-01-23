@@ -1,7 +1,7 @@
 import cypher from "./utils/cypher.ts";
 import { json } from "./utils/http.ts";
 
-const words = ["lemon", "pinky"];
+const words = ["lemon", "pinky", "brain"];
 
 export default async function choose(req: Request, _len: string) {
   // todo replace this stub
