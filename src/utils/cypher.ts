@@ -4,12 +4,16 @@ import { decode, encode } from "../deps.ts";
 const name = "AES-GCM";
 const algorithm = { name, length: 256 };
 const extractable = true;
-const keyUsage = ["encrypt", "decrypt"];
+const keyUsage: ReadonlyArray<KeyUsage> = ["encrypt", "decrypt"];
 
 export class Cypher {
-  private iv = crypto.getRandomValues(new Uint8Array(12));
-
-  constructor(private readonly key: CryptoKey) {
+  // todo move the IV to the encryption function and attach the
+  //  results to encrypted data
+  //  enc(plain) => encrypted.iv-as-string
+  constructor(
+    private readonly key: CryptoKey,
+    private readonly iv: ArrayBufferView,
+  ) {
   }
 
   async enc(plain: string) {
@@ -40,7 +44,8 @@ export default async function cypher() {
       extractable,
       keyUsage,
     );
-    defaultCypher = new Cypher(key);
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    defaultCypher = new Cypher(key, iv);
   }
   return defaultCypher;
 }

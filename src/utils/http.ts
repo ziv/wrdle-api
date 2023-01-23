@@ -2,14 +2,6 @@ export function url(req: Request) {
   return new URL(req.url);
 }
 
-export const text = (data: string) =>
-  new Response(data, {
-    headers: {
-      "content-type": "text/plain",
-      "access-control-allow-origin": "*",
-    },
-  });
-
 export const json = (data: unknown) =>
   new Response(JSON.stringify(data), {
     headers: {
