@@ -10,6 +10,7 @@ export type Route = [RegExp, EndPoint];
 export default function router(routes: Route[]) {
   return function (req: Request) {
     const path = url(req).pathname;
+    console.log({ path });
     for (const [regex, route] of routes) {
       const match = path.match(regex);
       if (match) {

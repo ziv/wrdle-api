@@ -5,7 +5,7 @@ import router, { Route } from "./utils/router.ts";
 
 const routes: Route[] = [
   [/^\/choose\/(.+)$/, choose],
-  [/^\/check\/(.+)\/(.+)$/, check],
+  [/^\/check$/, check],
 ];
 
 await serve(router(routes));

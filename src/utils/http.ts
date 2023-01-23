@@ -18,6 +18,15 @@ export const json = (data: unknown) =>
     },
   });
 
+export const error = (message: string) =>
+  new Response(message, {
+    status: 400,
+    headers: {
+      "content-type": "text/plain",
+      "access-control-allow-origin": "*",
+    },
+  });
+
 export const notFound = () =>
   new Response("not implemented", {
     status: 404,
